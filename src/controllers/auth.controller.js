@@ -103,7 +103,12 @@ export const profile = async (req, res) => {
 al refrescar la página  npm i js-cookie */ 
 
 export const verifyToken = async (req,res) => {
-    const {token} = req.cookies 
+    
+    const tokenCookie = req.headers.cookie;
+    console.log(tokenCookie);
+    const token = tokenCookie.split('=').pop();
+    console.log(token)
+    //const {token} = req.cookies 
 
     if(!token) return res.status(401).json({ message:"Unauthorized" });
 
