@@ -29,7 +29,8 @@ export const register = async (req,res) => {
             maxAge:36000005,
             secure:true,
             sameSite:'none',
-            domain: 'vercel.app'
+            //domain: 'vercel.app'
+            domain: 'https://ap-full-stack-mern-login-frontend.vercel.app'
          })
 
         /* res.json({
