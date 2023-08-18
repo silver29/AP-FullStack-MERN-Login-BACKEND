@@ -24,7 +24,13 @@ export const register = async (req,res) => {
         //res.send('registrando');
         //res.json(userSaved)
         //res.json({ token });
-        res.cookie('token',token)
+        res.cookie('token',token, {
+            httpOnly:true,
+            maxAge:36000005,
+            secure:true,
+            sameSite:'none',
+            domain: 'vercel.app'
+         })
 
         /* res.json({
             message:"User created successfully",

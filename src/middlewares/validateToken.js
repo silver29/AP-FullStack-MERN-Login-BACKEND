@@ -4,8 +4,7 @@ export const authRequired = (req, res, next) => {
     //console.log('validing token')
     //console.log(req.headers);
     //const token = req.headers.cookie;
-
-    
+ 
 // const { token } = req.cookies , devuelve un objeto vacio {}
 // console.log(req.headers) , existe el "token" con el nombre "token"
 // La solución (@festukranquel) : 
